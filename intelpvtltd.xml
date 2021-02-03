@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bir_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:src="@drawable/birth" />
+
+    <TextView
+        android:id="@+id/intel_view"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="sans-serif"
+        android:layout_marginHorizontal="50dp"
+        android:text="Intel Pvt. Ltd."
+
+        android:textColor="@color/black"
+        android:textSize="36sp" />
+
+    <ImageView
+        android:id="@+id/loc_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/intel_view"
+        android:scaleType="fitStart"
+        android:layout_marginHorizontal="50dp"
+        android:src="@drawable/loc" />
+
+    <TextView
+        android:id="@+id/cali_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intel_view"
+
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/loc_view"
+        android:fontFamily="sans-serif"
+        android:text="California, USA"
+        android:textColor="@color/black"
+        android:textSize="26sp" />
+
+    <ImageView
+        android:id="@+id/mas_view"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/loc_view"
+        android:scaleType="fitStart"
+        android:layout_marginHorizontal="50dp"
+        android:src="@drawable/mas" />
+
+    <TextView android:text="+91 897384756"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif"
+        android:layout_toRightOf="@id/mas_view"
+        android:layout_below="@id/loc_view"
+        android:textColor="@color/black" />
+
+    <TextView android:text="Description:"
+        android:id="@+id/des_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginHorizontal="50dp"
+
+        android:layout_below="@id/mas_view"
+        android:textColor="@color/black" />
+
+    <TextView android:text="Create a new project in Android Studio, go to File New Project and fill all required details to create a new project."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginHorizontal="50dp"
+
+        android:layout_below="@id/des_view"
+        android:textColor="@color/black" />
+
+</RelativeLayout>
+
+
