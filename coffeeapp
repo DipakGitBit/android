@@ -35,16 +35,16 @@
             android:textSize="20sp"
             android:onClick="decrements"
             tools:ignore="OnClick"/>
-    <TextView
-        android:id="@+id/count_view"
-        android:layout_marginLeft="16dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="0"
+        <TextView
+            android:id="@+id/count_view"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="0"
 
-        android:textColor="@color/black"
-        android:textSize="26sp" />
+            android:textColor="@color/black"
+            android:textSize="26sp" />
 
 
         <Button
@@ -64,14 +64,15 @@
 
     <TextView
         android:id="@+id/price_view"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:text="Price"
+        android:text="Order Summary"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        android:textSize="30sp" />
+        android:textSize="25sp" />
 
     <TextView
         android:id="@+id/price_text_view"
@@ -138,13 +139,29 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view) {
 
-        String pricemsg="Total "+q+" with price "+q*5;
 
+        int price=calculateprice(q);
+        String pricemsg=ordersum(price);
         displayMessage(pricemsg);
     }
     /**
      * This method displays the given quantity value on the screen.
      */
+    private String ordersum(int price){
+
+        String msg="Dipak ";
+        msg+="\nOrdered:"+price;
+        msg+="\nThank You";
+        return msg;
+
+    }
+
+    private int calculateprice(int q){
+
+        return (q*5);
+
+    }
+
     private void display(int number) {
 
         TextView quantityTextView=(TextView)
